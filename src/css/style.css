@@ -1,0 +1,10 @@
+/* #canvas {
+    -Styling for canvas, but you can't click through the canvas and interact with things behind it.
+    -set the posistion to absolute and use the z property to put it behind everything else
+    -z index
+    -if you want to have animations appear on top of buttons it won't happen because z puts behind the item.
+    -transparant buttons over top original buttons so when they get clicked 
+
+
+
+} */
