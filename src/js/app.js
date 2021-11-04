@@ -58,12 +58,13 @@ addWeaponsMultiplier.addEventListener("click", ()=> {
     if (zombieKiller.killCount >= zombieKiller.weaponCost) {
         zombieKiller.killCount = zombieKiller.killCount-zombieKiller.weaponCost;
         zombieKiller.weaponsMultiplierCount++;
-        zombieKiller.zombieKillWeaponMultiplier = Math.pow(1.2, zombieKiller.weaponsMultiplierCount);
+        zombieKiller.zombieKillWeaponMultiplier =  (Math.pow(1.2, zombieKiller.weaponsMultiplierCount));
         zombieKiller.weaponCost = ((10 / 100) * zombieKiller.weaponsMultiplierCount) + zombieKiller.weaponCost;
         getWeaponsMultiplierCount();
         updateKillCount();
         useWeapons();
         getWeaponCost();
+        getWeaponMultiplier()
     }
 });
 
@@ -76,7 +77,8 @@ addZombieDefenseSystem.addEventListener("click", () => {
     updateDefenseSystemCount();
     updateKillCount();
     defenseSystem();
-    getDefenseSystemCost()
+    getDefenseSystemCost();
+    getDefenseMultiplier();
     }
     
 });
