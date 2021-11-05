@@ -8,7 +8,8 @@ const weaponsMultiplerCostElem = document.getElementById('weapons-cost')
 const zombieDefenseSystemCostElem = document.getElementById('defense-system-cost');
 const weaponsMultiplierDisplayElem = document.getElementById('weapons-multiplier');
 const defenseMultiplierDisplayElem = document.getElementById('defenses-multiplier');
-
+// string literals different way to do that
+// baselayerElem.innerHTML = `<h2> base layer ${taco.baselayer.name}<h2>`; for api
 
 var zombieKiller = new ZombieKiller();
 var clickInterval = null;
@@ -39,11 +40,11 @@ if(zombieKiller.weaponsMultiplierCount >= 1) { killZombie.click(".kill-zombie") 
 }
 
 function getWeaponCost() {
-    weaponsMultiplerCostElem.innerText = "Weapon Cost: " + zombieKiller.weaponCost.toFixed(2);
+    weaponsMultiplerCostElem.innerText = "Weapon Cost: " + zombieKiller.weaponCost.toFixed(2) + " Kills";
 }
 
 function getDefenseSystemCost() {
-    zombieDefenseSystemCostElem.innerText = "Defense System Cost: " + zombieKiller.defenseSystemCost.toFixed(2);
+    zombieDefenseSystemCostElem.innerText = "Defense System Cost: " + zombieKiller.defenseSystemCost.toFixed(2) + " Kills";
 }
 
 function getWeaponMultiplier() {
