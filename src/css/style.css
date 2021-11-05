@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
 .body {
     background-color: black;
     background: url(https://cdn.pixabay.com/photo/2016/05/05/05/43/closing-1373306_1280.png);
+}
+
+.game-title {
+    font-family: 'Nosifer';
+    text-align: center;
+    font-size: 100px;
+    color: #831111;
+    background-color: #333;
+    border-radius: 15px;
 }
 
 .kill-zombie {
@@ -14,6 +25,8 @@
     font-size: 16px;
     border-radius: 15px;
     box-shadow: 0 9px #333;
+    font-family: 'Nosifer';
+    font-size: 15px;
   }
 
   .kill-zombie:active {
@@ -33,6 +46,8 @@
     font-size: 16px;
     border-radius: 15px;
     box-shadow: 0 9px #333;
+    font-family: 'Nosifer';
+    font-size: 15px;
   }
 
   .add-defense-system:disabled {
@@ -60,6 +75,8 @@
     font-size: 16px;
     border-radius: 15px;
     box-shadow: 0 9px #333;
+    font-family: 'Nosifer';
+    font-size: 15px;
   }
 
   .add-weapon:active {
@@ -79,6 +96,7 @@
       text-align: center;
       font-size: 25px;
       color: whitesmoke;
+      font-family: 'Nosifer';
   }
 
   .costs-item {
@@ -87,6 +105,8 @@
       box-shadow: 0 10px #333;
       text-align: center;
       color: whitesmoke;
+      font-family: 'Nosifer';
+    font-size: 15px;
   }
 
   .multiplier-item {
@@ -95,6 +115,8 @@
       box-shadow: 0 10px #333;
       text-align: center;
       color: whitesmoke;
+      font-family: 'Nosifer';
+      font-size: 15px;
   }
 
   .grid {
