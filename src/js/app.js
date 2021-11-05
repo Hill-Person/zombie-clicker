@@ -24,8 +24,8 @@ killZombie.addEventListener("click", () => {
 
 function updateKillCount() {
     zombieKillsDisplayElem.innerHTML = "Zombies Killed: " + zombieKiller.killCount.toFixed(0);
-    // defenseUIupdate();
-    // weaponUIupdate();
+    defenseUIupdate();
+    weaponUIupdate();
 }
 
 function updateDefenseSystemCount() {
