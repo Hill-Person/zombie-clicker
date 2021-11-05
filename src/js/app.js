@@ -8,11 +8,13 @@ const weaponsMultiplerCostElem = document.getElementById('weapons-cost')
 const zombieDefenseSystemCostElem = document.getElementById('defense-system-cost');
 const weaponsMultiplierDisplayElem = document.getElementById('weapons-multiplier');
 const defenseMultiplierDisplayElem = document.getElementById('defenses-multiplier');
-// string literals different way to do that
-// baselayerElem.innerHTML = `<h2> base layer ${taco.baselayer.name}<h2>`; for api
+
 
 var zombieKiller = new ZombieKiller();
 var clickInterval = null;
+
+defenseUIupdate();
+weaponUIupdate();
 
 killZombie.addEventListener("click", () => {
      zombieKiller.killCount += zombieKiller.zombieKillWeaponMultiplier;
@@ -22,6 +24,8 @@ killZombie.addEventListener("click", () => {
 
 function updateKillCount() {
     zombieKillsDisplayElem.innerHTML = "Zombies Killed: " + zombieKiller.killCount.toFixed(0);
+    // defenseUIupdate();
+    // weaponUIupdate();
 }
 
 function updateDefenseSystemCount() {
@@ -83,6 +87,26 @@ addZombieDefenseSystem.addEventListener("click", () => {
     }
     
 });
+
+function defenseUIupdate() {
+    if (zombieKiller.killCount <= zombieKiller.defenseSystemCost){
+        document.querySelector(".add-defense-system").disabled = true;
+    }
+
+    else {
+        document.querySelector(".add-defense-system").disabled = false;
+    }
+}
+
+function weaponUIupdate() {
+    if (zombieKiller.killCount <= zombieKiller.weaponCost){
+        document.querySelector(".add-weapon").disabled = true;
+    }
+
+    else {
+        document.querySelector(".add-weapon").disabled = false;
+    }
+}
 
 setInterval("defenseSystem()", 1000);
 
