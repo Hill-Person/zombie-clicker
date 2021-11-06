@@ -8,18 +8,29 @@ const weaponsMultiplerCostElem = document.getElementById('weapons-cost')
 const zombieDefenseSystemCostElem = document.getElementById('defense-system-cost');
 const weaponsMultiplierDisplayElem = document.getElementById('weapons-multiplier');
 const defenseMultiplierDisplayElem = document.getElementById('defenses-multiplier');
+let resetButtonElem = document.querySelector(".reset-button");
+let modal = document.getElementById("myModal");
+let btn = document.getElementById("modal-button");
+let span = document.getElementsByClassName("close")[0];
 
 
 var zombieKiller = new ZombieKiller();
 var clickInterval = null;
 
+
 defenseUIupdate();
 weaponUIupdate();
+getDefenseSystemCost();
+getWeaponCost();
 
 killZombie.addEventListener("click", () => {
      zombieKiller.killCount += zombieKiller.zombieKillWeaponMultiplier;
     updateKillCount();
 });
+
+// resetButtonElem.addEventListener("click", () => {
+//     new ZombieKiller();
+// });
 
 
 function updateKillCount() {
@@ -89,7 +100,7 @@ addZombieDefenseSystem.addEventListener("click", () => {
 });
 
 function defenseUIupdate() {
-    if (zombieKiller.killCount <= zombieKiller.defenseSystemCost){
+    if (zombieKiller.killCount < zombieKiller.defenseSystemCost){
         document.querySelector(".add-defense-system").disabled = true;
     }
 
@@ -99,7 +110,7 @@ function defenseUIupdate() {
 }
 
 function weaponUIupdate() {
-    if (zombieKiller.killCount <= zombieKiller.weaponCost){
+    if (zombieKiller.killCount < zombieKiller.weaponCost){
         document.querySelector(".add-weapon").disabled = true;
     }
 
@@ -108,6 +119,45 @@ function weaponUIupdate() {
     }
 }
 
+function clearFields() {
+    zombieKiller.killCount = 0;
+    zombieKiller.zombieDefenseSystemCount = 0;
+    zombieKiller.defenseSystemCost = 100;
+    zombieKiller.weaponsMultiplierCount = 0;
+    zombieKiller.weaponCost = 10;
+    zombieKiller.zombieKillWeaponMultiplier = 1;
+    zombieKiller.zombieKillDefenseMultiplier = 1;
+    {
+    updateDefenseSystemCount();
+    updateKillCount();
+    defenseSystem();
+    getDefenseSystemCost();
+    getDefenseMultiplier();
+    getWeaponCost();
+    getWeaponMultiplier();
+    getWeaponsMultiplierCount()
+    }
+}
+
+
 setInterval("defenseSystem()", 1000);
 
+resetButtonElem.addEventListener("click", () => {
+    clearFields();
+ });
 
+
+
+// btn.onclick = function() {
+//   modal.style.display = "block";
+// }
+
+// span.onclick = function() {
+//   modal.style.display = "none";
+// }
+
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }
