@@ -20,22 +20,33 @@
             <a href="https://github.com/Hill-Person"> Developer GitHub</a>
             <a href="https://hill-person.github.io">Developer Portfolio</a>
             <a href="https://orteil.dashnet.org/cookieclicker/">The inspiration for my game: Cookie Clicker</a>
-            <br>
-                    <button id="modal-button">Open Modal</button>
-                    <!-- The Modal -->
-                    <div id="myModal" class="modal">
-                    <!-- Modal content -->
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <p>Some text in the Modal..</p>
-                        </div>
-                    </div>
+
+            <div class="modal-container">
+            <button onclick="document.getElementById('id01').style.display='block'" class="modal-button">Open Animated Modal</button>
+
+                            <div id="id01" class="w3-modal">
+                                <div class="modal-content animate-top">
+                                <header class="w3-container w3-teal"> 
+                                    <span onclick="document.getElementById('id01').style.display='none'" 
+                                    class="close-button display-top-right">&times;</span>
+                                    <h2>Why</h2>
+                                </header>
+                                <div class="modal-container">
+                                    <p>Can't I</p>
+                                    <p>Get this</p>
+                                </div>
+                                <footer class="modal-container">
+                                    <p>To Work????</p>
+                                </footer>
+                                </div>
+                            </div>
+                </div>
           </div>
         </div> 
       </div>
       
 
-      <h1 class="game-title">They Rise</h1>
+      <h1 class="game-title"><img src="src/images/biggergravestone.png" class="gravestone-image">They Rise<img src="src/images/biggergravestone.png" class="gravestone-image"></h1>
       <br>
       <br>
 
@@ -43,21 +54,53 @@
    
 
     <div class="buttons-item">
-        <button class="kill-zombie">They approach! Click to Kill the zombies!</button>
+        <button class="kill-zombie" >
+            They approach! Click to Kill the zombies!
+            <br>
+            <img src="/src/images/zombie.png" class="zombie-image">
+            <img src="/src/images/zombie.png" class="zombie-image">
+            <img src="/src/images/zombie.png" class="zombie-image">
+            <img src="/src/images/zombie.png" class="zombie-image">
+            <img src="/src/images/zombie.png" class="zombie-image">
+            <img src="/src/images/zombie.png" class="zombie-image">
+            <img src="/src/images/zombie.png" class="zombie-image">
+            
+        </button>
         <br>
         <br>
-        <button class="add-defense-system">Paid in blood: Buy Defenses With Kills</button>
+       
+        <button class="add-defense-system">
+
+            <img src="src/images/barbedwall.png" class="barbedwall-image">
+            Paid in blood: Buy Defenses With Kills
+            <img src="src/images/barbedwall.png" class="barbedwall-image">
+        </button>
         <br>
         <br>
-        <button class="add-weapon">Paid in blood: Buy Weapons With Kills</button>
+        <button class="add-weapon">
+            <img src="src/images/gun.png" class="gun-image">
+            Paid in blood: Buy Weapons With Kills
+            <img src="src/images/gun.png" class="gun-image">
+        </button>
         <br>
         <br>
     </div>
 
     <div class="counters-item">
+        <img src="/src/images/blooddrop.png" class="blooddrop-image">
+        <img src="/src/images/blooddrop.png" class="blooddrop-image">
+        <img src="/src/images/blooddrop.png" class="blooddrop-image">
+        <img src="/src/images/blooddrop.png" class="blooddrop-image">
+        <img src="/src/images/blooddrop.png" class="blooddrop-image">
         <p class="zombie-kill-counter">Zombies Killed: 0</p>
         <p class="zombie-defense-system-count">Defenses Deployed: 0</p>
         <p class="weapon-multiplier-count">Weapons Owned: 0</p>
+        <br>
+        <img src="/src/images/blooddrop.png" class="blooddrop-image">
+        <img src="/src/images/blooddrop.png" class="blooddrop-image">
+        <img src="/src/images/blooddrop.png" class="blooddrop-image">
+        <img src="/src/images/blooddrop.png" class="blooddrop-image">
+        <img src="/src/images/blooddrop.png" class="blooddrop-image">
     </div>  
        
 

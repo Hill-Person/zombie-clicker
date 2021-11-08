@@ -24,17 +24,15 @@ getDefenseSystemCost();
 getWeaponCost();
 
 killZombie.addEventListener("click", () => {
-     zombieKiller.killCount += zombieKiller.zombieKillWeaponMultiplier;
+     zombieKiller.killCount += Math.floor(zombieKiller.zombieKillWeaponMultiplier);
     updateKillCount();
 });
 
-// resetButtonElem.addEventListener("click", () => {
-//     new ZombieKiller();
-// });
+
 
 
 function updateKillCount() {
-    zombieKillsDisplayElem.innerHTML = "Zombies Killed: " + zombieKiller.killCount.toFixed(0);
+    zombieKillsDisplayElem.innerHTML = "Zombies Killed: " + Math.floor(zombieKiller.killCount.toFixed(0));
     defenseUIupdate();
     weaponUIupdate();
 }
